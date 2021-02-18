@@ -34,6 +34,9 @@ footer {
     background: #45474d;
     height: 40vh;
     margin: 3vh 10vw;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     
 }
 
