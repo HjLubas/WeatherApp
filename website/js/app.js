@@ -1,7 +1,7 @@
 //openWeather API variables
 const baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
 const unitTemp = '&units=imperial';
-const apiKey = '&appid=dc4847456d8e2ddc8d56deadaee92431';
+const apiKey = 'your api';
 
 //UI variables
 const date = document.getElementById('date');
