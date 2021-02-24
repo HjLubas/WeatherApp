@@ -1,5 +1,5 @@
 /* Empty JS object to act as endpoint for all routes */
-const moodData = [];
+const projectData = [];
 
 /* Express to run server and routes */
 const express = require('express');
@@ -33,7 +33,7 @@ function listening() {
 app.get('/all', sendData);
 
 function sendData(request, response) {
-  response.send(moodData);
+  response.send(projectData);
 };
 
 // POST the location weather
@@ -44,11 +44,16 @@ function addMood(req, res) {
   console.log(weather_src_url);
   newEntry = {
     date: req.body.date,
+    city: req.body.city,
     temp: req.body.temp,
+    temp_real: req.body.temp_real,
+    temp_max: req.body.temp_max,
+    temp_min: req.body.temp_min,
     weather: weather_src_url,
+    description: req.body.weather,
     mood: req.body.mood
   }
-  moodData.push(newEntry);
-  res.send(moodData);
-  console.log(moodData);
+  projectData.push(newEntry);
+  res.send(projectData);
+  console.log(projectData);
 };

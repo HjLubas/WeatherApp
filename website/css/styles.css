@@ -1,27 +1,33 @@
+/* typography */
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2em;
     background: #3C3744;
     color: whitesmoke;
 }
 
+/* layout and rules */
 main {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
+    border: 5px ridge grey;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-footer {
-    text-align: center;
-}
-
+/* zip code text area styles */
 #zip {
-    min-width: 15vw;
-    height: 5vh;
+    height: 40px;
+    width: 200px;
     border-radius: 8px;
     text-align: center;
     background: #080708;
     color: #BFCDE0;
-    font-size: large;
+    font-size: medium;
     opacity: 0.7;
 }
 
@@ -30,37 +36,184 @@ footer {
     opacity: 1;
 }
 
+
+/* weather information styles */
 #entryHolder {
+    margin-top: 20px;
+    width: 500px;
+    min-height: 200px;
     background: #45474d;
-    height: 40vh;
-    margin: 3vh 10vw;
-    background-size: contain;
-    background-position: center;
+    background-size: 220px 220px;
+    background-position: right;
     background-repeat: no-repeat;
-    
+    color:rgb(6, 156, 226);
+    text-align: left;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#description,
+#mood_label {
+    float: right;
+}
+
+#date, 
+#city, 
+#temp, 
+#content {
+    color: rgb(11, 197, 11);
+}
+
+#description,
+#temp {
+    font-size: x-large;
+}
+
+#temp_real,
+#temp_hi_low {
+    font-size: x-small;
+}
+
+/* user feelings section */
+#user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #feelings {
-    width: 400px;
-    min-height: 15vh;
+    width: 500px;
+    height: 5vh;
     font-size: larger;
+    padding: 15px;
+    border-radius: 8px;
 }
 
+/* generate button styles and rules */
 #generate {
-    min-width: 15vw;
-    height: 5vh;
+    width: 200px;
+    height: 40px;
     border-radius: 12px;
     border: none;
     text-decoration: none;
     background: #35FF69;
-    font-size: large;
+    font-size: medium;
     opacity: 0.7;
+    margin: 20px;
 }
 
 #generate:hover {
     opacity: 1;
 }
 
-footer {
-    margin-top: 20px;
+#generate:focus {
+    outline:none;
+}
+
+
+/* media queries for views below 900 pixels*/
+@media(max-width: 900px){
+    body {
+        font-size: medium;
+    }
+
+    #zip,
+    #generate {
+        font-size: medium;
+        height: 30px;
+        width: 180px;
+    }
+
+    #description,
+    #temp {
+        font-size: x-large;
+    }
+
+    #temp_real,
+    #temp_hi_low {
+        font-size: x-small;
+    }
+
+    #entryHolder,
+    #feelings {
+        width: 400px;
+    }
+
+    #entryHolder {
+        background-size: 175px 175px;
+    }
+}
+
+/* media queries for views below 600 pixels*/
+@media(max-width:600px){
+    body {
+        font-size: small;
+    }
+
+    main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    h1,
+    h2 {
+        font-size: large;
+    }
+    #zip,
+    #generate {
+        font-size: small;
+        height: 22px;
+        width: 150px;
+    }
+
+    #description,
+    #temp {
+        font-size: large;
+    }
+
+    #temp_real,
+    #temp_hi_low {
+        font-size: xx-small;
+    }
+
+    #entryHolder,
+    #feelings {
+        width: 300px;
+    }
+
+    #entryHolder {
+        background-size: 150px 150px;
+    }
+}
+
+/* media queries for views below 400 pixels*/
+@media(max-width:400px){
+    body {
+        font-size: x-small;
+    }
+
+    h1,
+    h2 {
+        font-size: small;
+    }
+
+    #zip,
+    #generate {
+        font-size: x-small;
+        height: 17px;
+        width: 130px;
+    }
+
+    #description,
+    #temp {
+        font-size: medium;
+    }
+
+    #entryHolder,
+    #feelings {
+        width: 215px;
+    }
+
+    #entryHolder {
+        background-size: 120px 120px;
+    }
 }
