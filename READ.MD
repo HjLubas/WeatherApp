@@ -1,4 +1,4 @@
-FEWD Project 4 Weather Application
+FEWD Project 3 Weather Application
 
 Asynchronous Javascript topics utilized:
 
